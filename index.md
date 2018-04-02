@@ -10,7 +10,7 @@ console.log("hello world!");
     <section class="gh-cards">
         <header class="gh-cards-header">
             <a href="{{ repository.owner.url }}"><img src="{{ repository.owner.avatar_url }}" alt="Owner gravatar" /></a>
-            <h4><a href="{{ repository.name }}">{{ repository.name }}/</a></h4>
+            <h4><a href="{{ repository.name }}">{{ repository.name }}</a></h4>
             <p>{{ repository.language }}</p>
         </header>
         <p>{{ repository.description }}</p>

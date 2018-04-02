@@ -29,8 +29,14 @@ markdown: kramdown
 #  - jekyll-feed
 syntax_highlighter: rouge
 
+permalink: :title/
+
 kramdown:
   input: GFM
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 defaults:
   -
