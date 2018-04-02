@@ -32,8 +32,6 @@ syntax_highlighter: rouge
 kramdown:
   input: GFM
 
-# github:
-
 defaults:
   -
     values:
