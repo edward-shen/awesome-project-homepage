@@ -8,4 +8,4 @@ _includes/devicon/icons/*/*wordmark*.svg
 _includes/devicon/icons/*/*.eps
 
 # Devicons to include
-!_includes/devicon/icons/java
+!_includes/devicon/icons/*
