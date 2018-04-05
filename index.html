@@ -1,0 +1,24 @@
+---
+---
+
+<main>
+
+
+{% for repository in site.github.public_repositories %}
+<section class="gh-card">
+        <header class="gh-card-header">
+            <h4><a href="{{ repository.name }}">{{ repository.name }}</a></h4>
+            <a href="{{ repository.stargazers_url }}">{% include github/star.svg %} {{ repository.stargazers_count }}</a>
+            <a href="{{ repository.forks_url }}">{% include github/repo-forked.svg %} {{ repository.forks_count }}</a>
+        </header>
+        <main>
+            <p> hello world</p>
+        </main>
+        <footer class="gh-card-footer">
+            <a href="{{ repository.html_url }}">{% include github/octoface.svg %} Github</a>
+        </footer>
+</section>
+{% endfor %}
+
+
+</main>

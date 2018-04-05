@@ -1,6 +1,9 @@
 ---
 ---
 
-.gh-pages {
-    display: flex;
+@import "normalize";
+@import "gh-cards";
+
+body {
+    background-color: #EEE;
 }

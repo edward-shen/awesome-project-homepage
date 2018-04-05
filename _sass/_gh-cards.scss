@@ -1,0 +1,30 @@
+$avatar-size: 128px;
+
+$corner-size: 8px;
+
+.gh-card {
+    display: inline-flex;
+    background-color: aqua;
+    flex-direction: column;
+    border: 1px solid orange;
+    border-radius: $corner-size;
+
+    a {
+        text-decoration: none;
+    }
+
+    &-header {
+        display: flex;
+        
+        img {
+            width: $avatar-size;
+            height: $avatar-size;
+            border-radius: $corner-size;
+        }
+        background-color: brown;
+    }
+
+    &-footer {
+        background-color: chartreuse;
+    }
+}
