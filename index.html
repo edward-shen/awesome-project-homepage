@@ -2,25 +2,28 @@
 ---
 
 <main>
-
-{% for repository in site.github.public_repositories %}
+{%- for repository in site.github.public_repositories %}
 <section class="gh-card">
         <header class="gh-card-header">
-            {% if repository.language %}
-            {% include devicon/icons/{{ repository.language | downcase }}/{{ repository.language | downcase }}-plain.svg %}
-            {% endif %}
+            {%- if repository.language %}
+            {%- include devicon/icons/{{ repository.language | downcase }}/{{ repository.language | downcase }}-plain.svg %}
+            {%- endif %}
             <h4><a href="{{ repository.name }}">{{ repository.name }}</a></h4>
             <a href="{{ repository.stargazers_url }}">{% include github/star.svg %} {{ repository.stargazers_count }}</a>
             <a href="{{ repository.forks_url }}">{% include github/repo-forked.svg %} {{ repository.forks_count }}</a>
         </header>
         <main>
-            <p> hello world</p>
+            {%- if repository.description %}
+                <p>{{ repository.description }}</p>
+            {%- else %}
+                <p class="helper">This repository has no description.</p> 
+            {%- endif %}
         </main>
         <footer class="gh-card-footer">
             <a href="{{ repository.html_url }}">{% include github/octoface.svg %} Github</a>
         </footer>
 </section>
-{% endfor %}
+{%- endfor %}
 
 
 </main>
