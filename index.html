@@ -3,11 +3,12 @@
 
 <main>
 
-
 {% for repository in site.github.public_repositories %}
 <section class="gh-card">
         <header class="gh-card-header">
-            {% include devicon/icons/{{repository.language}}/{{repository.language}}-plain.svg %}
+            {% if repository.language %}
+            {% include devicon/icons/{{ repository.language | downcase }}/{{ repository.language | downcase }}-plain.svg %}
+            {% endif %}
             <h4><a href="{{ repository.name }}">{{ repository.name }}</a></h4>
             <a href="{{ repository.stargazers_url }}">{% include github/star.svg %} {{ repository.stargazers_count }}</a>
             <a href="{{ repository.forks_url }}">{% include github/repo-forked.svg %} {{ repository.forks_count }}</a>

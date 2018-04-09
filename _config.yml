@@ -38,6 +38,11 @@ sass:
   sass_dir: _sass
   style: compressed
 
+repository: edward-shen/awesome-project-homepage
+
+plugins:
+  - "jekyll-github-metadata"
+
 defaults:
   -
     values:
@@ -54,3 +59,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - CNAME
