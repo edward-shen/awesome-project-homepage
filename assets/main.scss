@@ -5,5 +5,22 @@
 @import "gh-cards";
 
 body {
-    background-color: #EEE;
+    background-color: var(--bg-color);
+}
+
+$day-color-1: white;
+$day-color-2: grey;
+$day-color-text: black;
+$day-color-bg: #eee;
+
+$night-color-1: #444;
+$night-color-2: grey;
+$night-color-text: white;
+$night-color-bg: #222
+;
+:root {
+    --primary-color: #{$night-color-1};
+    --secondary-color: #{$night-color-2};
+    --primary-text-color: #{$night-color-text};
+    --bg-color: #{$night-color-bg};
 }

@@ -1,35 +1,74 @@
-$avatar-size: 128px;
-
+$icon-size: 96px;
 $corner-size: 8px;
+$card-padding-top: 32px;
+$card-padding-side: 16px;
 
 .gh-card {
     display: inline-flex;
-    background-color: aqua;
+    background-color: var(--primary-color);
     flex-direction: column;
-    border: 1px solid orange;
     border-radius: $corner-size;
-
+    width: 400px;
     a {
         text-decoration: none;
+        color: var(--primary-text-color);
     }
 
-    &-header {
+    header {
         display: flex;
-
-        svg {
-            width:100px;
-            height:100px;
-        }
-        
-        img {
-            width: $avatar-size;
-            height: $avatar-size;
-            border-radius: $corner-size;
-        }
         background-color: brown;
+        height: 100px;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-top-left-radius: $corner-size;
+        border-top-right-radius: $corner-size;
+        box-shadow: 0px 5px 10px 1px #333;
+
+        h4 {
+            margin: 0 $card-padding-side;
+            flex: 1;
+        }
+
+        & > svg {
+            width: $icon-size;
+            height: $icon-size;
+            min-width: $icon-size;
+            min-height: $icon-size;
+            //background-color: var(--secondary-color);
+
+            border-radius: $corner-size;
+            fill: var(--secondary-color);
+            align-self: baseline;
+            padding: 4px;
+            margin-left: $card-padding-side;
+            margin-top: $card-padding-top;
+        }
+
+        aside {
+            margin-right: $card-padding-side;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }   
     }
 
-    &-footer {
-        background-color: chartreuse;
+    div {
+        margin-top: $card-padding-top;
+        margin-left: $card-padding-side;
+        margin-right: $card-padding-side;
+
+    color: var(--primary-text-color);
+    }
+
+    &-hint {
+        color: rgba(#fff, .5);
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--primary-color);
+        margin: 0 $card-padding-side;
     }
 }

@@ -4,26 +4,29 @@
 <main>
 {%- for repository in site.github.public_repositories %}
 <section class="gh-card">
-        <header class="gh-card-header">
-            {%- if repository.language %}
-            {%- include devicon/icons/{{ repository.language | downcase }}/{{ repository.language | downcase }}-plain.svg %}
-            {%- endif %}
-            <h4><a href="{{ repository.name }}">{{ repository.name }}</a></h4>
-            <a href="{{ repository.stargazers_url }}">{% include github/star.svg %} {{ repository.stargazers_count }}</a>
-            <a href="{{ repository.forks_url }}">{% include github/repo-forked.svg %} {{ repository.forks_count }}</a>
-        </header>
-        <main>
-            {%- if repository.description %}
-                <p>{{ repository.description }}</p>
-            {%- else %}
-                <p class="helper">This repository has no description.</p> 
-            {%- endif %}
-        </main>
-        <footer class="gh-card-footer">
-            <a href="{{ repository.html_url }}">{% include github/octoface.svg %} Github</a>
-        </footer>
+  <header>
+    {%- if repository.language %}
+    {% include devicon/icons/{{ repository.language | downcase }}/{{ repository.language | downcase }}-plain.svg class="test" %}
+    {%- endif %}
+    <h4><a href="{{ repository.name }}">{{ repository.name }}</a></h4>
+      <aside>
+        <a href="{{ repository.html_url }}/stargazers">{% include github/star.svg %} {{ repository.stargazers_count }}</a>
+        <a href="{{ repository.html_url }}/network">{% include github/repo-forked.svg %} {{ repository.forks_count }}</a>
+      </aside>
+    </header>
+    <div>
+      {%- if repository.description %}
+      <p>{{ repository.description }}</p>
+      {%- else %}
+      <p class="gh-card-hint"><i>(This repository has no description.)</i></p> 
+      {%- endif %}
+    </div>
+    <footer>
+      <a href="{{ repository.html_url }}">{% include github/octoface.svg %} Github</a>
+      {%- if repository.license %}
+      <a href="{{ repository.license.html_url }}">{% include github/law.svg %} {{ repository.license.spdx_id }}</a>
+      {%- endif %}
+    </footer>
 </section>
 {%- endfor %}
-
-
 </main>
