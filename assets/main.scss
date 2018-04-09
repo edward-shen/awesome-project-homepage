@@ -1,12 +1,6 @@
 ---
 ---
 
-@import "normalize";
-@import "gh-cards";
-
-body {
-    background-color: var(--bg-color);
-}
 
 $day-color-1: white;
 $day-color-2: grey;
@@ -19,10 +13,23 @@ $night-color-text: white;
 $night-color-bg: #222;
 $night-color-accent: #c33;
 
+$font-fam-sans: 'IBM Plex Sans', sans-serif;
+$font-fam-serif: 'IBM Plex Serif', serif;
+$font-fam-mono: 'IBM Plex Mono', monospace;
+
+body {
+    background-color: var(--bg-color);
+}
+
 :root {
     --primary-color: #{$night-color-1};
     --secondary-color: #{$night-color-2};
     --primary-text-color: #{$night-color-text};
     --bg-color: #{$night-color-bg};
     --accent-color: #{$night-color-accent};
+    font-family: $font-fam-sans;
 }
+
+
+@import "normalize";
+@import "gh-cards";
