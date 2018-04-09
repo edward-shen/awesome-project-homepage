@@ -16,11 +16,13 @@ $day-color-bg: #eee;
 $night-color-1: #444;
 $night-color-2: grey;
 $night-color-text: white;
-$night-color-bg: #222
-;
+$night-color-bg: #222;
+$night-color-accent: #c33;
+
 :root {
     --primary-color: #{$night-color-1};
     --secondary-color: #{$night-color-2};
     --primary-text-color: #{$night-color-text};
     --bg-color: #{$night-color-bg};
+    --accent-color: #{$night-color-accent};
 }

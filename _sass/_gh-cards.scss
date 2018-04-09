@@ -9,14 +9,24 @@ $card-padding-side: 16px;
     flex-direction: column;
     border-radius: $corner-size;
     width: 400px;
+
     a {
         text-decoration: none;
         color: var(--primary-text-color);
     }
 
+    svg {
+        width: 20px;
+        height: 20px;
+        path {
+            fill: var(--primary-text-color);
+        }
+        vertical-align: sub; // This works and I don't know why
+    }
+
     header {
         display: flex;
-        background-color: brown;
+        background-color: var(--secondary-color); 
         height: 100px;
         justify-content: space-between;
         align-items: flex-end;
@@ -29,27 +39,24 @@ $card-padding-side: 16px;
             flex: 1;
         }
 
+
         & > svg {
             width: $icon-size;
             height: $icon-size;
             min-width: $icon-size;
             min-height: $icon-size;
-            //background-color: var(--secondary-color);
-
             border-radius: $corner-size;
-            fill: var(--secondary-color);
             align-self: baseline;
             padding: 4px;
             margin-left: $card-padding-side;
             margin-top: $card-padding-top;
+            path {
+                fill: var(--accent-color);
+            }
         }
 
         aside {
             margin-right: $card-padding-side;
-            svg {
-                width: 20px;
-                height: 20px;
-            }
         }   
     }
 
@@ -57,8 +64,7 @@ $card-padding-side: 16px;
         margin-top: $card-padding-top;
         margin-left: $card-padding-side;
         margin-right: $card-padding-side;
-
-    color: var(--primary-text-color);
+        color: var(--primary-text-color);
     }
 
     &-hint {
