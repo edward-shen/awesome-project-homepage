@@ -7,14 +7,19 @@
   <header>
     {%- if repository.language %}
     {% include devicon/icons/{{ repository.language | downcase }}/{{ repository.language | downcase }}-plain.svg class="test" %}
+    {%- else %}
+    {% include question-mark.svg %}
     {%- endif %}
-    <h4><a href="{{ repository.name }}">{{ repository.name }}</a></h4>
+    <div>
+      <h4><a href="{{ repository.name }}">{{ repository.name }}</a></h4>
+      <!-- <p class="gh-card-hint">{{ repository.language }}</p> -->
+    </div>
       <aside>
         <a href="{{ repository.html_url }}/stargazers">{% include github/star.svg %} {{ repository.stargazers_count }}</a>
         <a href="{{ repository.html_url }}/network">{% include github/repo-forked.svg %} {{ repository.forks_count }}</a>
       </aside>
     </header>
-    <div>
+    <div class="gh-card-body">
       {%- if repository.description %}
       <p>{{ repository.description }}</p>
       {%- else %}

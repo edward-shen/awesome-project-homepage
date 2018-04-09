@@ -10,6 +10,9 @@ $card-padding-side: 16px;
     border-radius: $corner-size;
     width: 400px;
 
+    margin-left: $card-padding-top;
+    margin-top: $card-padding-top;
+
     a {
         text-decoration: none;
         color: var(--primary-text-color);
@@ -34,9 +37,21 @@ $card-padding-side: 16px;
         border-top-right-radius: $corner-size;
         box-shadow: 0px 5px 10px 1px #333;
 
-        h4 {
+        div {
             margin: 0 $card-padding-side;
             flex: 1;
+            display: flex;
+            justify-content: space-between;
+
+            h4 {
+                margin: 0;
+                // white-space: nowrap;
+            }
+
+            p {
+                align-self: flex-end;
+                margin: 0;
+            }
         }
 
 
@@ -45,7 +60,6 @@ $card-padding-side: 16px;
             height: $icon-size;
             min-width: $icon-size;
             min-height: $icon-size;
-            border-radius: $corner-size;
             align-self: baseline;
             padding: 4px;
             margin-left: $card-padding-side;
@@ -60,11 +74,12 @@ $card-padding-side: 16px;
         }   
     }
 
-    div {
+    &-body {
         margin-top: $card-padding-top;
         margin-left: $card-padding-side;
         margin-right: $card-padding-side;
         color: var(--primary-text-color);
+        min-height: 96px;
     }
 
     &-hint {
@@ -77,5 +92,6 @@ $card-padding-side: 16px;
         justify-content: space-between;
         background-color: var(--primary-color);
         margin: 0 $card-padding-side;
+        margin-bottom: 4px;
     }
 }
