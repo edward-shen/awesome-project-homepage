@@ -19,8 +19,24 @@ $font-fam-mono: 'IBM Plex Mono', monospace;
 
 body {
     background-color: var(--bg-color);
+    display: flex;
+    justify-content: flex-end;
 }
 
+%hint {
+    color: rgba(#fff, .5);
+    font-weight: 300;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
 :root {
     --primary-color: #{$night-color-1};
     --secondary-color: #{$night-color-2};
@@ -28,9 +44,15 @@ body {
     --bg-color: #{$night-color-bg};
     --accent-color: #{$night-color-accent};
     font-family: $font-fam-sans;
+    color: var(--primary-text-color);
+}
+
+.question-mark-svg {
+    color: #aaa;
 }
 
 
 @import "normalize";
 @import "gh-cards";
 @import 'forkme';
+@import 'navbar';

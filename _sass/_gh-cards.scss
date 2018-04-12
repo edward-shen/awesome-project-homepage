@@ -3,6 +3,9 @@ $corner-size: 8px;
 $card-padding-top: 32px;
 $card-padding-side: 16px;
 
+main {
+    display: inline-block;
+}
 .gh-card {
     display: inline-flex;
     background-color: var(--primary-color);
@@ -12,11 +15,6 @@ $card-padding-side: 16px;
 
     margin-left: $card-padding-top;
     margin-top: $card-padding-top;
-
-    a {
-        text-decoration: none;
-        color: var(--primary-text-color);
-    }
 
     .svg-parent svg {
         width: 20px;
@@ -83,8 +81,7 @@ $card-padding-side: 16px;
     }
 
     &-hint {
-        color: rgba(#fff, .75);
-        font-weight: 100;
+        @extend %hint;
     }
 
     footer {
