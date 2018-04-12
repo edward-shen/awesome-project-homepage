@@ -17,10 +17,25 @@ $font-fam-sans: 'IBM Plex Sans', sans-serif;
 $font-fam-serif: 'IBM Plex Serif', serif;
 $font-fam-mono: 'IBM Plex Mono', monospace;
 
+$icon-size: 96px;
+$corner-size: 8px;
+$margin-spacing: 32px;
+$card-padding-side: 16px;
+$card-width: 400px;
+$navbar-width: 200px;
+
+$width-break: $card-width * 3;
+
 body {
     background-color: var(--bg-color);
     display: flex;
-    justify-content: flex-end;
+}
+
+@media(max-width: $width-break) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 %hint {
@@ -37,6 +52,7 @@ a {
         text-decoration: underline;
     }
 }
+
 :root {
     --primary-color: #{$night-color-1};
     --secondary-color: #{$night-color-2};

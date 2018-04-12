@@ -1,20 +1,18 @@
-$icon-size: 96px;
-$corner-size: 8px;
-$card-padding-top: 32px;
-$card-padding-side: 16px;
-
 main {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
 .gh-card {
     display: inline-flex;
     background-color: var(--primary-color);
     flex-direction: column;
     border-radius: $corner-size;
-    width: 400px;
+    width: $card-width;
 
-    margin-left: $card-padding-top;
-    margin-top: $card-padding-top;
+    margin-right: $margin-spacing;
+    margin-top: $margin-spacing;
 
     .svg-parent svg {
         width: 20px;
@@ -33,7 +31,6 @@ main {
         align-items: flex-end;
         border-top-left-radius: $corner-size;
         border-top-right-radius: $corner-size;
-        box-shadow: 0px 5px 10px 1px #333;
 
         div {
             margin: 0 $card-padding-side;
@@ -61,7 +58,7 @@ main {
             align-self: baseline;
             padding: 4px;
             margin-left: $card-padding-side;
-            margin-top: $card-padding-top;
+            margin-top: $margin-spacing;
             path {
                 // fill: var(--accent-color);
             }
@@ -73,7 +70,7 @@ main {
     }
 
     &-body {
-        margin-top: $card-padding-top;
+        margin-top: $margin-spacing;
         margin-left: $card-padding-side;
         margin-right: $card-padding-side;
         color: var(--primary-text-color);
@@ -89,6 +86,12 @@ main {
         justify-content: space-between;
         background-color: var(--primary-color);
         margin: 0 $card-padding-side;
-        margin-bottom: 4px;
+        margin-bottom: $card-padding-side / 2;
+    }
+}
+@media (max-width: $width-break) {
+    .gh-card {
+        margin: 0 auto;
+        margin-bottom: $margin-spacing;
     }
 }
