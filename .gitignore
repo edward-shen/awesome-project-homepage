@@ -3,7 +3,7 @@ _site
 .jekyll-metadata
 _includes/github/svg
 _includes/devicon/icons/*
-_includes/devicon/icons/*/*original*.svg
+_includes/devicon/icons/*/*plain*.svg
 _includes/devicon/icons/*/*wordmark*.svg
 _includes/devicon/icons/*/*.eps
 

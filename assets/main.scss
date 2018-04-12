@@ -7,10 +7,10 @@ $day-color-2: grey;
 $day-color-text: black;
 $day-color-bg: #eee;
 
-$night-color-1: #444;
-$night-color-2: grey;
+$night-color-1: #303030;
+$night-color-2: #424242;
 $night-color-text: white;
-$night-color-bg: #222;
+$night-color-bg: #212121;
 $night-color-accent: #c33;
 
 $font-fam-sans: 'IBM Plex Sans', sans-serif;
@@ -33,3 +33,4 @@ body {
 
 @import "normalize";
 @import "gh-cards";
+@import 'forkme';

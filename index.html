@@ -2,11 +2,13 @@
 ---
 
 <main>
-{%- for repository in site.github.public_repositories %}
+{%- assign sorted = site.github.public_repositories | sort: 'stargazers_count'
+ | reverse %}
+{%- for repository in sorted %}
 <section class="gh-card">
   <header>
     {%- if repository.language %}
-    {% include devicon/icons/{{ repository.language | downcase }}/{{ repository.language | downcase }}-plain.svg class="test" %}
+    {% include devicon/icons/{{ repository.language | downcase }}/{{ repository.language | downcase }}-original.svg class="test" %}
     {%- else %}
     {% include question-mark.svg %}
     {%- endif %}
@@ -15,8 +17,8 @@
       <!-- <p class="gh-card-hint">{{ repository.language }}</p> -->
     </div>
       <aside>
-        <a href="{{ repository.html_url }}/stargazers">{% include github/star.svg %} {{ repository.stargazers_count }}</a>
-        <a href="{{ repository.html_url }}/network">{% include github/repo-forked.svg %} {{ repository.forks_count }}</a>
+        <a class="svg-parent" href="{{ repository.html_url }}/stargazers">{% include github/star.svg %} {{ repository.stargazers_count }}</a>
+        <a class="svg-parent" href="{{ repository.html_url }}/network">{% include github/repo-forked.svg %} {{ repository.forks_count }}</a>
       </aside>
     </header>
     <div class="gh-card-body">
@@ -27,9 +29,9 @@
       {%- endif %}
     </div>
     <footer>
-      <a href="{{ repository.html_url }}">{% include github/octoface.svg %} Github</a>
+      <a class="svg-parent" href="{{ repository.html_url }}">{% include github/octoface.svg %} Github</a>
       {%- if repository.license %}
-      <a href="{{ repository.license.html_url }}">{% include github/law.svg %} {{ repository.license.spdx_id }}</a>
+      <a class="svg-parent" href="{{ repository.license.html_url }}">{% include github/law.svg %} {{ repository.license.spdx_id }}</a>
       {%- endif %}
     </footer>
 </section>

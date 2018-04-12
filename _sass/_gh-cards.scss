@@ -18,7 +18,7 @@ $card-padding-side: 16px;
         color: var(--primary-text-color);
     }
 
-    svg {
+    .svg-parent svg {
         width: 20px;
         height: 20px;
         path {
@@ -65,7 +65,7 @@ $card-padding-side: 16px;
             margin-left: $card-padding-side;
             margin-top: $card-padding-top;
             path {
-                fill: var(--accent-color);
+                // fill: var(--accent-color);
             }
         }
 
