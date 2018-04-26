@@ -7,5 +7,12 @@ _includes/devicon/icons/*/*plain*.svg
 _includes/devicon/icons/*/*wordmark*.svg
 _includes/devicon/icons/*/*.eps
 
+_includes/official-bash-logo/assets/Logos/Font/
+_includes/official-bash-logo/assets/Logos/Identity/
+_includes/official-bash-logo/assets/Logos/Icons/PNG
+_includes/official-bash-logo/assets/Logos/Icons/Source
+_includes/official-bash-logo/assets/Logos/Icons/SVG/*
+!_includes/official-bash-logo/assets/Logos/Icons/SVG/128x128.svg
+
 # Devicons to include
 !_includes/devicon/icons/*
